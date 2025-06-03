@@ -6,7 +6,7 @@ class ListNode:
 
 class leetcode():
     def ispalidrome(self,x):
-        ''' ispalidrome function takes '''
+        ''' ispalidrome function takes number x and checks if it is positive or it is a multiple of 10, if so it return 0 and if is positive number or 0, it procees to find the quotient and reminder'''
         if x < 0 or (x%10 ==0 and x !=0):
             return False
         rev = 0
@@ -23,10 +23,7 @@ class leetcode():
         return reversed_x
     
     def myAtoi(self, s: str) -> int:
-        '''This function takes a string s, removes the whitespaces on left and right,returns 0 if the result is empty, 
-        assigns -1, or 1 when the first index of S during slicing is either '-', or '+', if sign is not indicated, 
-        it assigns s=s[:],uses package takewhile from itertools to consider consistent digit part of the string, 
-        joins the digits and sures that the result is 32 bits'''
+        '''This function takes a string s, removes the whitespaces on left and right,returns 0 if the result is empty, assigns -1, or 1 when the first index of S during slicing is either '-', or '+', if sign is not indicated, it assigns s=s[:],uses package takewhile from itertools to consider consistent digit part of the string,joins the digits and sures that the result is 32 bits'''
         s = s.strip()
         if not s:
             return 0
@@ -45,8 +42,7 @@ class leetcode():
         return max(min(num, 2**31 - 1), -2**31)
 
     # Definition for singly-linked list.
-    ''' This functions takes two singly linked lists, reverses the values of the two nodes separately and 
-    adds the two results to get a single value that is also stored in a reversed version in a single linked rist'''
+    ''' This functions takes two singly linked lists, reverses the values of the two nodes separately and adds the two results to get a single value that is also stored in a reversed version in a single linked rist'''
     def addTwoNumbers(self, l1: ListNode, l2: ListNode) -> ListNode:
         dummy = ListNode(0)
         current = dummy
